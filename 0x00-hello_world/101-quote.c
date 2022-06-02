@@ -1,6 +1,6 @@
 #include <unistd.h>
 /**
-* main -
+* main - entry
 *
 * Return: 1
 */
