@@ -6,9 +6,7 @@
 *
 * Return: Always 0 (Success)
 */
-
 int main(void)
-  
 {  
 int n, l;
 srand(time(0));
