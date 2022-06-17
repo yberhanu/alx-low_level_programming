@@ -1,22 +1,22 @@
 #include "main.h"
+#include <stdio.h>
 /**
-* print_number - Print the given int one digit at a time
-* @n: The integer to print
+* print_number - we're printing some serious numbers
+* @n: that's the number, fear it.
+*
+* Return: void
 */
 void print_number(int n)
 {
-if (n == 0)
+unsigned int num;
+if (n < 0)
 {
-_putchar('0');
-return;
-}
-else if (n > 0)
-n *= -1;
-else
 _putchar('-');
-if ((n / 10) != 0)
-{
-print_number((n / 10) * -1);
+num = -n;
 }
-_putchar((n % 10) * -1 + '0');
+else
+num = n;
+if (num / 10)
+print_number(num / 10);
+_putchar('0' + num % 10);
 }
