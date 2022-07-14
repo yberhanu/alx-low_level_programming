@@ -1,15 +1,19 @@
-extern printf
+%define sys_write 1
+%define stdout 1
+%define sys_exit 60
+%define success 0
+%define nl 10
+section .data
+message db "Hello, Holberton", nl
+message_len equ $-message
 section .text
 global main
 main:
-push rbp
-mov rdi, fmt
-mov rsi, msg
-mov rax, 0
-call printf
-pop rbp
-mov rax,
-ret
-section .data
-msg:	 db "Hello, Holberton", 0
-fmt:	 db "%s", 10, 0
+mov rax, sys_write
+mov rdi, stdout
+mov rsi, message
+mov rdx, 17
+syscall
+mov rax, sys_exit
+mov rdi, success
+syscall
