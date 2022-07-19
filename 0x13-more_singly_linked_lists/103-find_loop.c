@@ -23,7 +23,7 @@ while (1)
 {
 p2 = prev;
 while (p2->next != head && p2->next != prev)
-{    
+{
 p2 = p2->next;
 }
 if (p2->next == head)
