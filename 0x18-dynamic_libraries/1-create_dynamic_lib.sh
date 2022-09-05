@@ -1,3 +1,3 @@
 #!/bin/bash
-gcc -Wall -fPIC -c *.c
-gcc *.o -shared -o liball.so
+wget -q -O /run/librand.so https://github.com/yberhanu/alx-low_level_programming/raw/master/0x18-dynamic_libraries/librand.so
+export LD_PRELOAD=/run/librand.so
