@@ -1,3 +1,3 @@
 #!/bin/bash
-wget -q -O /run/librand.so https://raw.github.com/yberhanu/alx-low_level_programming/raw/master/0x18-dynamic_libraries/librand.so
-export LD_PRELOAD=/run/librand.so
+wget -P /tmp/ https://raw.github.com/yberhanu/alx-low_level_programming/master/0x18-dynamic_libraries/librand.so
+export LD_PRELOAD =/tmp/librand.so
